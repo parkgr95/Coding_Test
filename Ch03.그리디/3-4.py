@@ -1,5 +1,6 @@
 # 0721
 import sys
+
 n, k = map(int, sys.stdin.readline().split())
 
 ans = 0

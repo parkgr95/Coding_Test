@@ -1,5 +1,6 @@
 # 0721
 import sys
+
 n, m, k = map(int, sys.stdin.readline().split())
 arr = sorted(list(map(int, sys.stdin.readline().split())))
 

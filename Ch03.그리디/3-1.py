@@ -1,5 +1,6 @@
 # 0721
 import sys
+
 n = int(sys.stdin.readline().split())
 
 # 큰 동전부터 차례대로 확인

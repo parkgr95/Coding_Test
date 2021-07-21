@@ -1,5 +1,6 @@
 # 0721
 import sys
+
 n, m = map(int, sys.stdin.readline().split())
 arr = [list(map(int, input().split())) for _ in  range(n)]
 
