@@ -1,4 +1,5 @@
 # 0721
+# idea: bfs를 이용해 출구까지 이동한 칸의 개수를 구한다.
 from collections import deque
 import sys
 

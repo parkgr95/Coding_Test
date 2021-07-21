@@ -1,4 +1,5 @@
 # 0721
+# idea: '가장 큰 화폐 단위부터' 돈을 거슬러 주기
 import sys
 
 n = int(sys.stdin.readline().split())

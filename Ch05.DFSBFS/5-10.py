@@ -1,4 +1,5 @@
 # 0721
+# idea: dfs를 이용해 연결되어 있는 노드들의 묶음을 찾아 준다.
 import sys
 
 n, m = map(int, sys.stdin.readline().split())

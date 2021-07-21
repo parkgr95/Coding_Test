@@ -1,4 +1,5 @@
 # 0721
+# idea: 최대한 많이 나누기
 import sys
 
 n, k = map(int, sys.stdin.readline().split())

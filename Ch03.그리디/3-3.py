@@ -1,4 +1,5 @@
 # 0721
+# idea: 각 행마다 가장 작은 수를 찾은 뒤에 그 수 중에서 가장 큰 수 찾기
 import sys
 
 n, m = map(int, sys.stdin.readline().split())

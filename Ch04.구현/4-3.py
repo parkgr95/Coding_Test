@@ -1,3 +1,5 @@
+# 0721
+# idea: 경우의 수가 적은 경우 직접 입력
 import sys
 
 n = sys.stdin.readline()

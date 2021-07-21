@@ -1,4 +1,5 @@
 # 0721
+# idea: 시뮬레이션, dx, dy로 이동할 방향을 기록
 import sys
 
 n = int(sys.stdin.readline())

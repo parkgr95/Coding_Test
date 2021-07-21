@@ -1,4 +1,5 @@
 # 0721
+# idea: 완전 탐색, 시간을 문자열로 변환
 import sys
 
 n = int(sys.stdin.readline())

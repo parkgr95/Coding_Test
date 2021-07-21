@@ -1,4 +1,5 @@
 # 0721
+# idea: 반복되는 수열에 대해서 파악하기
 import sys
 
 n, m, k = map(int, sys.stdin.readline().split())
