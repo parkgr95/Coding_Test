@@ -25,9 +25,9 @@ Coding-Test
 		- 알고리즘 문제를 풀 때는 시간 제한과 데이터의 개수를 먼저 확인한 뒤 어느 정도의 시간 복잡도의 알고리즘으로 작성해야 풀 수 있을 것인지 예측할 수 있어야 한다.
 		- Pyp3를 이용하자
 	+ 예제
-		- 4-1 [상하좌우](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-1.py)
-		- 4-2 [시각](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-2.py)
-		- 4-3 [왕실의 나이트](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-3.py)
-		- 4-4 [게임 개발](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-4.py)
+		- 4-1 [상하좌우](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-1.py): 시뮬레이션, dx, dy로 이동할 방향을 기록
+		- 4-2 [시각](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-2.py): 완전 탐색, 시간을 문자열로 변환
+		- 4-3 [왕실의 나이트](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-3.py): 경우의 수가 적은 경우 직접 입력
+		- 4-4 [게임 개발](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B5%AC%ED%98%84/4-4.py): 시뮬레이션, 방향을 설정해주는 것이 핵심. 2차원 리스트를 선언할 때는 컴프리헨션을 이용하는 것이 효율적이다.
 * * *
 * CHAPTER 05 DFS/BFS
