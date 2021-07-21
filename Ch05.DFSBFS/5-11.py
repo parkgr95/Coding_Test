@@ -1,29 +1,35 @@
+# 0721
 from collections import deque
+import sys
 
-n, m = map(int, input().split())
+n, m = map(int, sys.stdin.readline().split())
+# strip(): 문자열 맨 앞과 맨 끝의 공백문자를 제거
+arr = [list(map(int, sys.stdin.readline().strip())) for _ in range(n)]
 
-graph = []
-for i in range(n):
-  graph.append(list(map(int, input())))
-
-dx = [-1, 1, 0, 0] # 상, 하, 좌, 우
+# 상, 하, 좌, 우
+dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
 def bfs(x, y):
-  queue = deque()
-  queue.append((x, y))
-  while queue:
-    x, y = queue.popleft()
-    for i in range(4):
-      nx = x + dx[i]
-      ny = y + dy[i]
-      if nx < 0 or nx >= n or ny < 0 or ny >= m:
-        continue
-      if graph[nx][ny] == 0:
-        continue
-      if graph[nx][ny] == 1:
-        graph[nx][ny] = graph[x][y] + 1
-        queue.append((nx, ny))
-  return graph[n - 1][m - 1]
+    global ans
+    q = deque()
+    q.append((x, y))
+    while q:
+        x, y = q.popleft()
+        # 미로의 출구에 도착하면 종료
+        if x == n-1 and y == m-1:
+            break
+        arr[x][y] = 0
+        ans += 1
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < n and 0 <= ny < m and arr[nx][ny]:
+                arr[nx][ny] = 0
+                q.append((nx, ny))
+ans = 0
+bfs(0, 0)
+# 처음 시작 칸 빼기
+print(ans - 1)
 
-print(bfs(0, 0))
+# 회고: 모든 갈 수 있는 칸을 방문하는 게 아니기 때문에 도착 장소에서 bfs() 함수를 끝내야 한다.
