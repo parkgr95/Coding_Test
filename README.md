@@ -25,9 +25,9 @@ Coding-Test
 		- 알고리즘 문제를 풀 때는 시간 제한과 데이터의 개수를 먼저 확인한 뒤 어느 정도의 시간 복잡도의 알고리즘으로 작성해야 풀 수 있을 것인지 예측할 수 있어야 한다.
 		- Pyp3를 이용하자
 	+ 예제
-		- 4-1 [상하좌우](https://github.com/parkgr95/Coding_Test/blob/main/Ch03.%EA%B7%B8%EB%A6%AC%EB%94%94/4-1.py)
-		- 4-2 [시각](https://github.com/parkgr95/Coding_Test/blob/main/Ch03.%EA%B7%B8%EB%A6%AC%EB%94%94/4-2.py)
-		- 4-3 [왕실의 나이트](https://github.com/parkgr95/Coding_Test/blob/main/Ch03.%EA%B7%B8%EB%A6%AC%EB%94%94/4-3.py)
-		- 4-4 [게임 개발](https://github.com/parkgr95/Coding_Test/blob/main/Ch03.%EA%B7%B8%EB%A6%AC%EB%94%94/4-3.py)
+		- 4-1 [상하좌우](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B7%B8%EB%A6%AC%EB%94%94/4-1.py)
+		- 4-2 [시각](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B7%B8%EB%A6%AC%EB%94%94/4-2.py)
+		- 4-3 [왕실의 나이트](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B7%B8%EB%A6%AC%EB%94%94/4-3.py)
+		- 4-4 [게임 개발](https://github.com/parkgr95/Coding_Test/blob/main/Ch04.%EA%B7%B8%EB%A6%AC%EB%94%94/4-3.py)
 * * *
 * CHAPTER 05 DFS/BFS
