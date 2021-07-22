@@ -1,4 +1,5 @@
 # 0721
+# idea: 재귀 함수를 이용한 함수. '방문 처리' 필수
 # DFS
 # DFS 메서드 정의
 def dfs(graph, v, visited):

@@ -1,10 +1,11 @@
-n = int(input())
+# 0722
+# idea: 정렬 라이브러리를 사용해 내림차순 정렬
+import sys
 
-array = []
-for i in range(n):
-  array.append(int(input()))
+n = int(sys.stdin.readline().strip())
+arr = [sys.stdin.readline().strip() for _ in range(n)]
 
-array = sorted(array, reverse = True)
+arr = sorted(arr, reverse=True)
 
-for i in array:
-  print(i, end = ' ')
+for i in arr:
+    print(i, end=' ')

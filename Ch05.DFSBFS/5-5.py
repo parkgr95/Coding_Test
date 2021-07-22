@@ -1,4 +1,5 @@
 # 0721
+# idea: 두 가지 방법으로 구현
 # 팩토리얼
 # 반복적으로 구현한 n!
 def factorial_iterative(n):

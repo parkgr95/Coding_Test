@@ -1,5 +1,8 @@
-# 파이썬 장점을 이용한 퀵 정렬
-array = list(map(int, input().split()))
+# 0722
+# 파이썬 장점을 살린 퀵 정렬
+import sys
+
+array = list(map(int, sys.stdin.readline().split()))
 
 def quick_sort(array):
   if len(array) <= 1:

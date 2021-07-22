@@ -1,11 +1,10 @@
-n = int(input())
+# 0722
+# idea: 정렬 라이브러리와 람다를 사용해 내림차순 정렬
+import sys
 
-array = []
-for i in range(n):
-  data = input().split()
-  array.append((data[0], int(data[1])))
+n = int(sys.stdin.readline().strip())
+arr = [list(map(str, sys.stdin.readline().split())) for _ in range(n)]
 
-array = sorted(array, key = lambda student:student[1])
-
-for student in array:
-  print(student[0], end = ' ')
+arr = sorted(arr, key=lambda x: x[1])
+for i in arr:
+    print(i[0], end=' ')

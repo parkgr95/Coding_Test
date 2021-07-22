@@ -1,6 +1,5 @@
 # 0721
 # idea: 시뮬레이션, 방향을 설정해주는 것이 핵심. 2차원 리스트를 선언할 때는 컴프리헨션을 이용하는 것이 효율적이다.
-
 # BFS
 from collections import deque
 import sys

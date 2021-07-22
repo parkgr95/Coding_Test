@@ -1,4 +1,5 @@
 # 0721
+# idea: 큐를 이용한 함수. '방문 처리' 필수
 from collections import deque
 
 # BFS

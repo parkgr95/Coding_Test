@@ -1,4 +1,5 @@
 # 0721
+# idea: collections에서 deque 활용. popleft() 기억하기
 # 큐
 # 선입선출(FIFO)
 from collections import deque

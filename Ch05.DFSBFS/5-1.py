@@ -1,4 +1,5 @@
 # 0721
+# idea: 기본 리스트에서 append()와 pop()를 이용
 # 스택
 # 선입후출(FILO) or 후입선출(LIFO)
 stack = []
