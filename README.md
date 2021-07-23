@@ -70,3 +70,8 @@ Coding-Test
 		- 5-9 [BFS](https://github.com/parkgr95/Coding_Test/blob/main/Ch05.DFSBFS/5-9.py)
 		- 5-10 [음료수 얼려 먹기](https://github.com/parkgr95/Coding_Test/blob/main/Ch05.DFSBFS/5-10.py)
 		- 5-11 [미로 ](https://github.com/parkgr95/Coding_Test/blob/main/Ch05.DFSBFS/5-11.py)
+* * *
+* **CHAPTER 06 정렬**
+
+* * * 
+* **CHAPTER 07 이진 탐색**
