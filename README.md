@@ -72,6 +72,44 @@ Coding-Test
 		- 5-11 [미로 ](https://github.com/parkgr95/Coding_Test/blob/main/Ch05.DFSBFS/5-11.py)
 * * *
 * **CHAPTER 06 정렬**
+	+ 정렬이란
+		- 데이터를 특정한 기준에 따라서 순서대로 나열하는 것.
+	+ 선택 정렬(Selection Sort)
+		- 데이터가 무작위로 여러 개 있을 때, 매번 '가장 작은 데이터를 선택해' 순서대로 앞에 있는 데이터와 바꾸는 과정을 반복하는 정렬
+		- 시간 복잡도: N-1번 만큼 가장 작은 수를 찾아서 맨 앞으로 보낸다. 또한 매번 가장 작은 수를 찾기 위해서 비교 연산이 필요하다. 따라서 연산 횟수는 <br>
+		N + (N-1) + (N-2) + ... + 2 = N * (N+1) / 2 = (N^2 + N) / 2 <br>
+		이고 시간 복잡도는 O(N^2)이다.
+	+ 삽입 정렬
+		- 특정한 데이터를 적절한 위치에 삽입하는 정렬. 특정한 데이터가 적절한 위치에 들어가기 이전에, 그 앞까지의 데이터는 이미 정렬되어 있다고 가정한다. 또한, 필요할 때만 위치를 바꾸므로 '데이터가 거의 정렬되어 있을 때' 훨씬 효율적인 정렬이다. 
+		- 시간 복잡도: 시간 복잡도는 O(N^2)이나, 최선의 경우(=데이터가 거의 정렬되어 있는 상태라면) O(N)의 시간 복잡도를 가진다.
+	+ 퀵 정렬
+		- 기준(=피벗, Pivot)을 설정한 다음 기준보다 큰 수와 작은 수를 교환하는 정렬을 수행한 이후에, 피벗으로 기준으로 왼쪾 리스트와 오른쪽 리스트에서 각각 다시 정렬을 수행행하는 정렬이다.
+		- 시간 복잡도: 평균 시간 복잡도는 O(NlogN)이다. 최악의 경우(=리스트의 가장 왼쪽 데이터를 피벗으로 삼을 때, '이미 데이터가 정렬되어 있는 상태'라면) 시간 복잡도는 O(N^)이다.
+	+ 계수 정렬
+		- 특정한 조건이 부합할 때만 사용할 수 있지만 매우 빠른 정렬 알고리즘이다.
+		- 데이터의 크기 범위가 제한되어 정수 형태로 표현할 수 있을 때, 가장 큰 데이터와 가장 작은 데이터의 차이가 1,000,000을 넘지 않을 때 효과적으로 사용할 수 있다. 즉, 데이터의 크기가 한정되어 있고, 데이터의 크기가 많이 중복되어 있을수록 유리하며 항상 사용할 수는 없다.
+		- 비교 기반의 정렬 알고리즘이 아닌 별도의 리스트를 선언하고 그 안에 정렬에 대한 정보를 담는다.
+		- 시간 복잡도: 모든 데이터가 양의 정수인 상황에서 데이터의 개수를 N, 데이터 중 최대값의 크기를 K라고 할 때, 계수 정렬의 시간 복잡도는 O(N+K)이다.
+		- 공간 복잡도: O(N+K)이다.
+	+ 정렬 라이브러리
+		- 문제에서 별도의 요구가 없다면 단순히 정렬해야 하는 상황에서는 기본 정렬 라이브러리를 사용하고, 데이터의 범위가 한정되어 있으며 더 빠르게 동작해야 할 때는 계수 정렬을 사용하자.
+		- 시간 복잡도: 항상 최악의 경우에도 시간 복잡도는 O(NlogN)이다.
+	+ 예제
+		- 6-1 [선택 정렬](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-1.py)
+		- 6-2 [파이썬 스와프(Swap)](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-2.py)
+		- 6-3 [삽입 정렬](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-3.py)
+		- 6-4 [퀵 정렬](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-4.py)
+		- 6-5 [파이썬의 장점을 살린 퀵 정렬](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-5.py)
+		- 6-6 [계수 정렬](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-6.py)
+		- 6-7 [sorted](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-7.py)
+		- 6-8 [sort](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-8.py)
+		- 6-9 [정렬 라이브러리에서 key를 활용](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-9.py)
+		- 6-10 [위에서 ](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-10.py)
+		- 6-11 [성적이 낮은 순서로 학생 출력하기](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-11.py)
+		- 6-12 [두 배열의 원소 ](https://github.com/parkgr95/Coding_Test/blob/main/Ch06.%EC%A0%95%EB%A0%AC/6-12.py)
 
 * * * 
 * **CHAPTER 07 이진 탐색**
+
+* * * 
+* **CHAPTER 08 다이나믹 프로그래밍**
