@@ -110,6 +110,53 @@ Coding-Test
 
 * * * 
 * **CHAPTER 07 이진 탐색**
-
+	+ 순차 탐색(Sequential Search)
+		- 리스트 안에 있는 특정한 데이터를 찾기 위해 앞에서부터 데이터를 하나씩 차례대로 확인하는 방법.
+		- 시간 복잡도: O(N)
+	+ 이진 탐색(Binary Search)
+		- 찾으려는 데이터와 중간점(시작점과 끝점의 가운데) 위치에 있는 데이터를 반복적으로 비교하여 확인하는 방법.
+		- 배열 내부의 데이터가 정렬되어 있으면 매우 빠르게 데이터를 찾을 수 있는 알고리즘. 탐색 범위를 절빤씩 좁혀가며 데이터를 탐색한다.
+		- 시간 복잡도: 한 번 확인할 때마다 확인하는 원소의 개수가 절반씩 줄어드므로, 시간 복잡도가 O(logN)이다.
+		- 데이터의 개수나 값이 1,000만 단위 이상으로 넘어가면 이진 탐색과 같이 O(logN)의 속도를 내야하는 알고리즘을 떠올리자!
+	+ 이진 탐색 트리
+		- 이진 탐색이 동작할 수 있도록 고안된, 효율적인 탐색이 가능한 자료구조이다.
+		- 특징:
+			1. 부모 노드보다 왼쪽 자식 노드가 작다.
+			2. 부모 노드보다 오른쪽 자식 노드가 크다.
+	+ 예제
+		- 7-1 [순차 탐색](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-1.py)
+		- 7-2 [재귀 함수로 구현한 이진 탐색](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-2.py)
+		- 7-3 [반복문으로 구현한 이진 탐색](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-3.py)
+		- 7-4 [한 줄 입력받아 출력](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-4.py)
+		- 7-5 [부품 찾기(이진 탐색)](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-5.py)
+		- 7-6 [부품 찾기(계수 정렬)](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-6.py)
+		- 7-7 [부품 찾기(집합 자료형)](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-7.py)
+		- 7-8 [떡볶이 떡 만들기](https://github.com/parkgr95/Coding_Test/blob/main/Ch07.%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89/7-8.py)
 * * * 
 * **CHAPTER 08 다이나믹 프로그래밍**
+	+ 다이나믹 프로그래밍(Dynamic Programming)이란
+		- 메모리 공간을 더 사용하여 연산 속도를 비약적으로 증가시킨 방법. 동적 계획법이라고도 한다.
+		- 2가지 방식(탑다운, 보텀업)이 존재한다.
+			1. 탑다운(Top-Down) 방식: 큰 문제를 해결하기 위해 작은 문제를 호출. 재귀 함수를 이용해서 다이나믹 프로그래밍 소스코드를 작성. '메모이제이션 기법'이 자주 사용됨.
+			2. 보텀업(Bottom-Up) 방식: 작은 문제부터 차근차근 답을 도출. 반복문을 이용해서 소스코드를 작성. 다이나믹 프로그래밍의 전형적인 형태. 결과 저장용 리스트인 'DP 테이블'이 사용됨
+		- 다음 조건을 만족할 때 사용할 수 있다.
+			1. 큰 문제를 작은 문제로 나눌 수 있다.
+			2. 작은 문제에서 구한 정답은 그것을 포함하는 큰 문제에서도 동일하다.
+	+ 메모이제이션(Memoization)
+		- 한 번 구한 결과를 메모리 공간에 메모해두고 같은 식을 다시 호출하면 메모한 결과를 그대로 가져오는 기법을 의미.
+		- 캐싱(Caching)이라고도 한다.
+		- 탑다운 방식에 국한되어 사용된다.
+	+ 문제에서의 다이나믹 프로그래밍
+		- 완전 탐색 알고리즘으로 접근했을 때 시간이 오래 걸리면 문제들의 중복 여부를 확인하여 다이나믹 프로그래밍을 적용할 수 있는 지 확인해보자.
+		- 단순히 재귀 함수로 작성한 뒤에 (탑다운) 메모이제이션을 적용할 수 있느면 코드를 개선해보자. ex) 피보나치 수열
+		- 탑다운 방식보다는 보텀업 방식으로 구현하자.
+		- 재귀적인 소스 코드에서 'recursion depth(재귀 함수 깊이)'와 관련도니 오류가 발쌩할 땐, sys 라이브러리에 setrecursionlimit() 함수를 호출하여 재귀 제한을 완하할 수 있다.
+	+ 예제
+		- 8-1 [피보나치 함수](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-1.py)
+		- 8-2 [피보나치 수열(재귀적)](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-2.py)
+		- 8-3 [호출되는 함수 확인](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-3.py)
+		- 8-4 [피보나치 수열 소스코드(반복적)](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-4.py)
+		- 8-5 [1로 만들기](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-5.py)
+		- 8-6 [개미 전사](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-6.py)
+		- 8-7 [바닥 공사](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-7.py)
+		- 8-8 [효율적인 화폐 구성](https://github.com/parkgr95/Coding_Test/blob/main/Ch08.%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/8-8.py)
