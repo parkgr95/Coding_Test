@@ -1,7 +1,7 @@
 # 0727
 # 위상 정렬
-from collections import deque
 import sys
+from collections import deque
 
 # 노드의 개수와 간선의 개수를 입력받기
 v, e = map(int, sys.stdin.readline().split())
