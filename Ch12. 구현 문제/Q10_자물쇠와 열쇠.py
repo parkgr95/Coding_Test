@@ -1,12 +1,17 @@
-def rotate_a_matrix_by_90_degree(a):
-    n = len(a)
-    m = len(a[0])
-    result = [[0] * n for _ in range(m)]
-    for i in range(n):
+# 0731
+# 자물쇠와 열쇠
+# idea: 완전 탐색을 이용해 열쇠를 이동이나 회전시켜 자물쇠에 끼워보기
+# 시계 방향으로 90도 회전시키는 함수
+def rotate(key):
+    m = len(key)
+    arr = [[0] * m for _ in range(m)]
+    for i in range(m):
         for j in range(m):
-            result[j][n - i - 1] = a[i][j]
-    return result
+            arr[j][m - 1 - i] = key[i][j]
+    return arr
 
+
+# Key와 Lock을 맞춰보는 함수
 def check(new_lock):
     lock_length = len(new_lock) // 3
     for i in range(lock_length, lock_length * 2):
@@ -15,6 +20,7 @@ def check(new_lock):
                 return False
     return True
 
+
 def solution(key, lock):
     n = len(lock)
     m = len(key)
@@ -22,15 +28,15 @@ def solution(key, lock):
     for i in range(n):
         for j in range(n):
             new_lock[i + n][j + n] = lock[i][j]
-            
+
     for rotation in range(4):
-        key = rotate_a_matrix_by_90_degree(key)
+        key = rotate(key)
         for x in range(n * 2):
             for y in range(n * 2):
                 for i in range(m):
                     for j in range(m):
                         new_lock[x + i][y + j] += key[i][j]
-                if check(new_lock) == True:
+                if check(new_lock):
                     return True
                 for i in range(m):
                     for j in range(m):

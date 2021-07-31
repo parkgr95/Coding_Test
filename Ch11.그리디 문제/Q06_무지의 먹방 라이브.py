@@ -1,3 +1,6 @@
+# 0729
+# 무지의 먹방 라이브
+# idea : 우선순위 큐를 이용하여 시간이 적게 걸리는 음식부터 제거해 나가가.
 import heapq
 
 def solution(food_times, k):
@@ -25,3 +28,5 @@ def solution(food_times, k):
     # 남은 음식 중에서 몇 번째 음식인지 확인하여 출력
     result = sorted(q, key =lambda x: x[1]) # 음식의 번호 기준으로 정렬
     return result[(k - sum_value) % length][1]
+
+# 회고: 답안지를 확인하였다... 아직도 이해가 잘 안간다... 다시 한 번 복습하자!
