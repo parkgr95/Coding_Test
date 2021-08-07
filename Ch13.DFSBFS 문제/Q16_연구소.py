@@ -1,6 +1,6 @@
 # 0804
 # 연구소
-# idea: bfs
+# idea: bfs, 완전 탐색
 import copy
 import sys
 from collections import deque
