@@ -1,10 +1,11 @@
-n = int(input())
-students = []
+# 0808
+# 국영수
+# idea: 정렬 함수 사용
+import sys
 
-for _ in range(n):
-  students.append(input().split())
+if __name__ == "__main__":
+    array = [list(sys.stdin.readline().split()) for _ in range(int(sys.stdin.readline().rstrip()))]
 
-students.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
-
-for student in students:
-  print(student[0])
+    array.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
+    for a in array:
+        print(a[0])
