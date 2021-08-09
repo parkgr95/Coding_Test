@@ -4,17 +4,16 @@
 import heapq
 import sys
 
-if __name__ == "__main":
-    heap = []
-    for i in range(int(sys.stdin.readline().rstrip())):
-        heapq.heappush(heap, int(sys.stdin.readline().rstrip()))
+heap = []
+for i in range(int(sys.stdin.readline().rstrip())):
+    heapq.heappush(heap, int(sys.stdin.readline().rstrip()))
 
-    ans = 0
-    while len(heap) != 1:
-        f = heapq.heappop(heap) # 가장 작은 값
-        s = heapq.heappop(heap) # 그 다음 작은 값
-        num = f + s
-        ans += num
-        heapq.heappush(heap, num)
+ans = 0
+while len(heap) != 1:
+    f = heapq.heappop(heap) # 가장 작은 값
+    s = heapq.heappop(heap) # 그 다음 작은 값
+    num = f + s
+    ans += num
+    heapq.heappush(heap, num)
 
-    print(ans)
+print(ans)
