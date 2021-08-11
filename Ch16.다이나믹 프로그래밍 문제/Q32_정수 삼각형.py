@@ -20,4 +20,5 @@ for i in range(1, n):
 
 print(max(d[n-1]))
 
+# 회고: 금강 참조할 것
 

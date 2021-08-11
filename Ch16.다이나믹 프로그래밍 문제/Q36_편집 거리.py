@@ -1,3 +1,6 @@
+# 0809
+# 편집 거리
+# idea: 다이나믹 프로그래밍
 import sys
 
 def edit_dist(str1, str2):

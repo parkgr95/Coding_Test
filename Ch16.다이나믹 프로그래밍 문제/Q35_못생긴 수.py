@@ -23,4 +23,4 @@ for i in range(1, n):
         x5 += 1
         next5 = d[x5] * 5
 
-print(d)
+print(d[n-1])
