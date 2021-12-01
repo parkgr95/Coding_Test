@@ -11,8 +11,8 @@ arr = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 visited = [[False] * m for _ in range(n)]
 
 # 상, 하, 좌, 우
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 
 def bfs(x, y):
     global ans
@@ -26,9 +26,8 @@ def bfs(x, y):
             nx = x + dx[i]
             ny = y + dy[i]
             if 0 <= nx < n and 0 <= ny < m and arr[nx][ny] == 0 and not visited[nx][ny]:
-                q.append((nx, ny))
-                arr[nx][ny] = 1
                 visited[nx][ny] = True
+                q.append((nx, ny))
 
 ans = 0
 bfs(x, y)
@@ -66,8 +65,8 @@ arr = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 
 visited = [[False] * m for _ in range(n)]
 
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 
 # 왼쪽으로 회전
 def turn_left():
@@ -85,7 +84,6 @@ while True:
     ny = y + dy[d]
     # 회전한 이후 정면에 육지고 가보지 않은 경우
     if arr[nx][ny] == 0 and not visited[nx][ny]:
-        arr[nx][ny] = 1
         visited[nx][ny] = True
         x, y = nx, ny
         turn_time = 0
